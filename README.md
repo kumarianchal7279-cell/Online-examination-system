@@ -1,4 +1,4 @@
-# 🚀 Online Exam System – Java (Spring Boot)
+# Online Examination System
 
 <p align="center">
 <img src="https://img.shields.io/badge/Java-17-blue?style=for-the-badge&logo=java&logoColor=white" alt="Java 17">
@@ -7,39 +7,45 @@
 <img src="https://img.shields.io/badge/H2%20Database-lightgrey?style=for-the-badge" alt="H2 Database">
 </p>
 
-A comprehensive **Online Examination System** built using **Spring Boot, Spring Security, Thymeleaf, Bootstrap 5**, and **JPA/Hibernate**.  
-The platform provides a secure and user-friendly environment for **Admins** and **Students** to manage and take online tests effectively.
+## Overview
 
-✔️ Completely Free  
-✔️ Full Source Code Included  
-✔️ Easy Setup & Deployment
+A robust and scalable **Online Examination Management System** built with enterprise-grade technologies. This application provides a comprehensive solution for educational institutions and organizations to manage exams, questions, and student assessments efficiently.
 
----
-
-## 📑 Table of Contents
-- [Quick Start](#-quick-start-5-minutes)
-- [Screenshots](#-screenshots)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Configuration](#-configuration)
-- [Running the Application](#-running-the-application)
-- [Default Credentials](#-default-credentials)
-- [Project Structure](#-project-structure)
-- [Troubleshooting](#-troubleshooting)
-- [License](#-license)
-- [Usage Guide](#-usage-guide)
-- [Support & Contact](#-support--contact)
+**Key Highlights:**
+- Fully open-source with complete source code
+- Production-ready architecture with Spring Boot 3
+- Secure authentication and authorization
+- Intuitive user interface for both administrators and students
+- Real-time exam monitoring and result analysis
 
 ---
 
-## ⚡ Quick Start (5 Minutes)
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [System Requirements](#system-requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running the Application](#running-the-application)
+- [Database](#database)
+- [Project Structure](#project-structure)
+- [Usage Guide](#usage-guide)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Support](#support)
+
+---
+
+## Quick Start
+
+Get the application running in minutes:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/sumitkumar1503/online-exam-system.git
-cd online-exam-system
+git clone https://github.com/kumarianchal7279-cell/Online-examination-system.git
+cd Online-examination-system
 
 # 2. Install dependencies
 mvn clean install
@@ -47,157 +53,185 @@ mvn clean install
 # 3. Run the application
 mvn spring-boot:run
 
-# 4. Open browser and visit
-# http://localhost:7890
+# 4. Access the application
+# Open your browser: http://localhost:7890
 
-# 5. Login with default admin credentials
+# 5. Login with default credentials
 # Username: admin
 # Password: adminpass
 ```
 
 ---
 
-#  Screenshots
-
+## Screenshots
 
 <table width="100%">
-
-
 <tr>
-<td align="center"><b>Exam Page (with Pagination)</b></td>
-</tr>
-<tr>
-<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/exampage.png" width="90%"></td>
-</tr>
-
-<tr>
+<td align="center"><b>Student Exam Interface</b></td>
 <td align="center"><b>Admin Dashboard</b></td>
 </tr>
 <tr>
-<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/admindashboard.png?raw=true" width="90%"></td>
-</tr>
-
-<tr>
-<td align="center"><b>Manage Exam</b></td>
+<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/exampage.png" width="95%"></td>
+<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/admindashboard.png?raw=true" width="95%"></td>
 </tr>
 <tr>
-<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/adminmanageexam.png" width="90%"></td>
-</tr>
-
-<tr>
-<td align="center"><b>Manage Question</b></td>
+<td align="center"><b>Exam Management</b></td>
+<td align="center"><b>Question Management</b></td>
 </tr>
 <tr>
-<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/adminmanagequestion.png" width="90%"></td>
+<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/adminmanageexam.png" width="95%"></td>
+<td align="center"><img src="https://github.com/sumitkumar1503/online-exam-system/blob/master/screenshots/adminmanagequestion.png" width="95%"></td>
 </tr>
 </table>
 
 ---
 
-# ✨ Features
+## Features
 
-## 👨‍💻 Admin Features
-- Secure Admin Login
-- Stats Dashboard (Total Students, Exams, Questions, Submissions)
-- **Exam CRUD** (title, duration, description)
-- **Question CRUD** per exam
-- Cascade deletes for exams → questions → results
-- Protect answered questions from accidental delete
-- Manage Students
-- Reset Student Password
-- Delete Student Account (cascade all related data)
-- View all submissions for any exam
+### Administrator Capabilities
+
+- **Authentication & Security**
+  - Secure login with role-based access control
+  - Password encryption with BCrypt algorithm
+
+- **Dashboard & Analytics**
+  - Real-time statistics (students, exams, questions, submissions)
+  - Visual performance metrics and KPIs
+
+- **Exam Management**
+  - Create, update, delete exam configurations
+  - Define exam duration, description, and scheduling
+  - Control exam visibility and access permissions
+
+- **Question Management**
+  - Add multiple-choice questions with options
+  - Configure correct answers and points
+  - Question linking with cascade delete protection
+  - Prevent deletion of answered questions
+
+- **Student Administration**
+  - View and manage registered students
+  - Reset student passwords
+  - Delete accounts with data cleanup
+  - Track student activity
+
+- **Result Monitoring**
+  - View detailed exam submissions
+  - Analyze student performance metrics
+  - Generate performance reports
+
+### Student Capabilities
+
+- **Account Management**
+  - Self-registration with email validation
+  - Secure login and password management
+  - Profile customization with picture upload
+  - Password change functionality
+
+- **Exam Interface**
+  - Browse available exams with details
+  - Paginated questions for readability
+  - Visual question palette for navigation
+  - Live countdown timer with auto-submit
+
+- **Assessment & Feedback**
+  - Immediate results with score and percentage
+  - Pass/fail status determination
+  - Detailed answer review
+  - Historical exam results tracking
 
 ---
 
-## 🧑‍🎓 Student Features
-- Student Registration (Full Name, Email, Mobile, Profile Picture)
-- Secure Login
-- Dashboard with KPIs + Performance Chart
-- Take Exam (paginated interface + question palette)
-- Live Timer (auto submit)
-- Instant Results (score, percentage, pass/fail)
-- Detailed Review Page (correct vs incorrect answers)
-- Profile Update
-- Upload New Profile Picture
-- Change Password
-- View All Previous Exam Results
+## Tech Stack
+
+| Component | Technology | Version |
+|-----------|-----------|---------|
+| **Backend** | Spring Boot | 3.x |
+| **Security** | Spring Security | 6.x |
+| **ORM** | Hibernate / JPA | 6.x |
+| **Frontend** | Thymeleaf | 3.x |
+| **UI Framework** | Bootstrap | 5.x |
+| **Charting** | Chart.js | Latest |
+| **Database** | H2 | Latest |
+| **Build Tool** | Maven | 3.6+ |
+| **Java Runtime** | OpenJDK/JDK | 17+ |
 
 ---
 
-# 🛠️ Tech Stack
+## System Requirements
 
-| Layer | Technology                                 |
-|------|--------------------------------------------|
-| Backend | Spring Boot 3, Spring Security 6           |
-| Frontend | Thymeleaf, Html, Bootstrap 5, Chart.js     |
-| Database | H2 (file-based) (configurable to other DB) |
-| ORM | Hibernate / JPA                            |
-| Build | Maven                                      |
-| Storage | Local File System for images               |
-
----
-
-# � Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-
-| Requirement | Version | Download |
-|------------|---------|----------|
-| Java | 17 or higher | [Download Java](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) |
-| Maven | 3.6+ | [Download Maven](https://maven.apache.org/download.cgi) |
-| Git | Latest | [Download Git](https://git-scm.com/download) |
-| IDE (Optional) | IntelliJ / VS Code / Eclipse | [Download IDE](https://www.jetbrains.com/idea/download/) |
+| Requirement | Specification | Download |
+|------------|---------------|----------|
+| **Java** | 17 or higher | [Download](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) |
+| **Maven** | 3.6 or later | [Download](https://maven.apache.org/download.cgi) |
+| **Git** | Latest version | [Download](https://git-scm.com/download) |
+| **RAM** | 2GB minimum | - |
+| **Storage** | 500MB for installation | - |
 
 ### Verify Installation
 
 ```bash
-# Check Java version
-java -version
-
-# Check Maven version
-mvn -version
-
-# Check Git version
-git --version
+java -version       # Should show Java 17+
+mvn -version        # Should show Maven 3.6+
+git --version       # Should show Git 2.x+
 ```
 
 ---
 
-# 🔧 Installation & Setup
+## Installation
 
-## Step 1: Clone the Repository
+### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/sumitkumar1503/online-exam-system.git
-cd online-exam-system
+git clone https://github.com/kumarianchal7279-cell/Online-examination-system.git
+cd Online-examination-system
 ```
 
-## Step 2: Install Maven Dependencies
-
-Navigate to the project directory and run:
+### Step 2: Install Dependencies
 
 ```bash
 mvn clean install
 ```
 
-This command will:
-- Download all required dependencies
-- Compile the project
-- Create the target folder
+This will:
+- Download all project dependencies
+- Compile source code
+- Run test suite
+- Create JAR package
 
-## Step 3: Configure Application Properties
+### Step 3: Create Required Directories
 
-The `application.properties` file is located at:
+```bash
+# Windows
+mkdir data
+mkdir uploads
+
+# Linux/macOS
+mkdir -p data uploads
 ```
-src/main/resources/application.properties
+
+**Directory purposes:**
+- `data/` - H2 database file storage
+- `uploads/` - User profile pictures and uploads
+
+### Step 4: Build Project
+
+```bash
+mvn clean package
 ```
 
-Key configurations to verify/update:
+---
+
+## Configuration
+
+### Application Properties
+
+Edit `src/main/resources/application.properties`:
 
 ```properties
 # Server Configuration
 server.port=7890
+server.servlet.context-path=/
 
 # Database Configuration (H2)
 spring.datasource.url=jdbc:h2:file:./data/examdb
@@ -208,113 +242,38 @@ spring.datasource.password=password
 # JPA/Hibernate Configuration
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
 
-# H2 Console
+# H2 Console (Development)
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 
 # Thymeleaf Configuration
-spring.thymeleaf.prefix=classpath:/templates/
-spring.thymeleaf.suffix=.html
+spring.thymeleaf.mode=HTML
+spring.thymeleaf.cache=false
 
-# File Upload Configuration
+# File Upload
 file.upload-dir=uploads/
+
+# Logging
+logging.level.root=INFO
+logging.level.com.example.exam=DEBUG
 ```
 
-## Step 4: Create Required Directories
+### MySQL Configuration (Alternative)
 
-Create the following directories in the project root:
+To use MySQL instead of H2:
 
-```bash
-# Windows
-mkdir data
-mkdir uploads
-
-# Linux/Mac
-mkdir -p data uploads
-```
-
-These directories are used for:
-- **data/**: H2 database storage
-- **uploads/**: Student profile picture uploads
-
-## Step 5: Build the Project
-
-```bash
-mvn clean install
-```
-
----
-
-# 🚀 Running the Application
-
-### Option 1: Run from IDE
-
-1. Open the project in your IDE (IntelliJ, VS Code, or Eclipse)
-2. Navigate to: `src/main/java/com/example/exam/OnlineExamApplication.java`
-3. Right-click → Run `OnlineExamApplication.main()`
-4. Wait for the server to start
-
-### Option 2: Run from Terminal
-
-```bash
-mvn spring-boot:run
-```
-
-### Option 3: Run from JAR File
-
-```bash
-# First, build the project
-mvn clean package
-
-# Then run the JAR
-java -jar target/online-exam-0.0.1-SNAPSHOT.jar
-```
-
-Once started, you'll see:
-```
-Started OnlineExamApplication in X seconds (JVM running for X.XXXs)
-```
-
-The application will be available at: **http://localhost:7890**
-
----
-
-# ⚙️ Configuration
-
-## Database Setup
-
-The application uses **H2 Database** (file-based), which is automatically initialized on first run.
-
-### Access H2 Console
-
-After starting the application, visit:
-```
-http://localhost:7890/h2-console
-```
-
-Login credentials:
-- **JDBC URL**: `jdbc:h2:file:./data/examdb`
-- **Username**: `sa`
-- **Password**: `password`
-
-### Switching to Another Database (MySQL/PostgreSQL)
-
-To use **MySQL** instead of H2:
-
-1. Update `application.properties`:
-
+**1. Update `application.properties`:**
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/exam_db
 spring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
 spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.datasource.password=your_password
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
-spring.jpa.hibernate.ddl-auto=update
 ```
 
-2. Add MySQL dependency to `pom.xml` (replace the H2 dependency):
-
+**2. Update `pom.xml`:**
 ```xml
 <dependency>
     <groupId>mysql</groupId>
@@ -323,189 +282,259 @@ spring.jpa.hibernate.ddl-auto=update
 </dependency>
 ```
 
+**3. Create database:**
+```sql
+CREATE DATABASE exam_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
 ---
 
-# 🔐 Default Credentials
+## Running the Application
 
-### Admin Account
+### Option 1: Maven (Recommended)
+
+```bash
+mvn spring-boot:run
+```
+
+### Option 2: IDE
+
+1. Open in IntelliJ IDEA, Eclipse, or VS Code
+2. Navigate to: `src/main/java/com/example/exam/OnlineExamApplication.java`
+3. Right-click → Run
+4. Wait for startup
+
+### Option 3: JAR File
+
+```bash
+java -jar target/online-exam-0.0.1-SNAPSHOT.jar
+```
+
+**Access the application:**
+```
+http://localhost:7890
+```
+
+---
+
+## Database
+
+### H2 Console Access
+
+```
+URL: http://localhost:7890/h2-console
+
+Credentials:
+├── JDBC URL: jdbc:h2:file:./data/examdb
+├── Username: sa
+└── Password: password
+```
+
+### Default Admin Credentials
 
 | Field | Value |
 |-------|-------|
 | **Username** | admin |
 | **Password** | adminpass |
 
-### Test Student Account (create new)
-
-You can register a new student account using the registration page at:
-```
-http://localhost:7890/register
-```
+**⚠️ Important:** Change default credentials in production.
 
 ---
 
-# 📁 Project Structure
+## Project Structure
 
 ```
 online-exam-system/
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/exam/
-│   │   │   ├── OnlineExamApplication.java          # Main Application Class
-│   │   │   ├── config/                             # Configuration Classes
-│   │   │   │   ├── SecurityConfig.java             # Spring Security Configuration
-│   │   │   │   └── CustomAuthSuccessHandler.java   # Auth Success Handler
-│   │   │   ├── controller/                         # REST Controllers
-│   │   │   ├── model/                              # Entity Models (JPA)
-│   │   │   ├── repository/                         # Data Access Layer
-│   │   │   └── service/                            # Business Logic Layer
-│   │   └── resources/
-│   │       ├── application.properties              # App Configuration
-│   │       ├── static/                             # CSS, JS, Images
-│   │       │   └── js/exam-timer.js               # Exam Timer Logic
-│   │       └── templates/                          # Thymeleaf Templates
-│   │           ├── fragments.html                  # Reusable HTML fragments
-│   │           ├── index.html
-│   │           ├── login.html
-│   │           ├── register.html
-│   │           ├── admin/                          # Admin Pages
-│   │           └── student/                        # Student Pages
-│   └── test/                                       # Unit Tests
-├── data/                                           # H2 Database (auto-created)
-├── uploads/                                        # User Uploaded Files
-├── pom.xml                                         # Maven Configuration
-└── README.md                                       # Project Documentation
+│
+├── src/main/java/com/example/exam/
+│   ├── OnlineExamApplication.java      # Entry point
+│   │
+│   ├── config/
+│   │   ├── SecurityConfig.java
+│   │   └── CustomAuthSuccessHandler.java
+│   │
+│   ├── controller/                     # REST endpoints
+│   │   ├── AdminController.java
+│   │   ├── StudentController.java
+│   │   └── AuthController.java
+│   │
+│   ├── service/                        # Business logic
+│   │   ├── ExamService.java
+│   │   ├── QuestionService.java
+│   │   ├── StudentService.java
+│   │   └── UserService.java
+│   │
+│   ├── repository/                     # Data access
+│   │   ├── ExamRepository.java
+│   │   ├── QuestionRepository.java
+│   │   └── UserRepository.java
+│   │
+│   └── model/                          # JPA entities
+│       ├── User.java
+│       ├── Exam.java
+│       ├── Question.java
+│       └── Result.java
+│
+├── src/main/resources/
+│   ├── application.properties
+│   │
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── dashboard.html
+│   │   │   ├── manage_exams.html
+│   │   │   └── manage_questions.html
+│   │   │
+│   │   └── student/
+│   │       ├── dashboard.html
+│   │       ├── exam_page.html
+│   │       └── my_results.html
+│   │
+│   └── static/
+│       ├── css/
+│       ├── js/exam-timer.js
+│       └── images/
+│
+├── pom.xml                             # Maven config
+├── mvnw / mvnw.cmd                     # Maven wrapper
+└── README.md
+
 ```
 
 ---
 
-# 🐛 Troubleshooting
+## Usage Guide
 
-### Issue 1: Port 7890 Already in Use
+### For Administrators
 
-**Error**: `Address already in use: bind`
+**Login:**
+1. Visit `http://localhost:7890/login`
+2. Enter: `admin` / `adminpass`
+3. Access dashboard
 
-**Solution**:
+**Dashboard Operations:**
+- Monitor real-time statistics
+- Track exam submissions
+- View student performance
+
+**Exam Management:**
+- Create new exams
+- Edit exam details
+- Configure timing and instructions
+
+**Question Management:**
+- Add questions to exams
+- Define answer options
+- Mark correct answers
+
+**Student Management:**
+- View registered students
+- Reset passwords
+- Manage permissions
+
+**Results Analysis:**
+- View submission details
+- Analyze performance metrics
+- Generate reports
+
+### For Students
+
+**Registration:**
+1. Visit `http://localhost:7890/register`
+2. Complete form
+3. Confirm email
+4. Login
+
+**Taking an Exam:**
+1. Select exam from dashboard
+2. Review instructions
+3. Answer questions
+4. Use palette for navigation
+5. Submit before time expires
+
+**View Results:**
+- Check scores immediately
+- Review correct answers
+- Access exam history
+
+---
+
+## Troubleshooting
+
+### Port 7890 Already in Use
+
 ```bash
-# Option 1: Change port in application.properties
-server.port=8080
-
-# Option 2: Kill the process using port 7890 (Windows)
+# Windows
 netstat -ano | findstr :7890
 taskkill /PID <PID> /F
 
-# Option 2: Kill the process using port 7890 (Linux/Mac)
+# Linux/macOS
 lsof -ti:7890 | xargs kill -9
 ```
 
-### Issue 2: Maven Command Not Found
-
-**Error**: `mvn: command not found` or `'mvn' is not recognized`
-
-**Solution**:
-1. Install Maven: [Download Maven](https://maven.apache.org/download.cgi)
-2. Add Maven to PATH:
-   - **Windows**: Add `C:\apache-maven-3.x.x\bin` to System Environment Variables
-   - **Linux/Mac**: Add to `~/.bashrc` or `~/.zshrc`:
-     ```bash
-     export PATH=$PATH:/path/to/apache-maven-3.x.x/bin
-     ```
-3. Verify: `mvn -version`
-
-### Issue 3: Java Version Mismatch
-
-**Error**: `Unsupported class version` or `Java 17+ required`
-
-**Solution**:
-```bash
-# Check your Java version
-java -version
-
-# If needed, install Java 17+
-# Windows: Use installer from oracle.com
-# Linux: sudo apt-get install openjdk-17-jdk
-# Mac: brew install openjdk@17
+Or change port in `application.properties`:
+```properties
+server.port=8080
 ```
 
-### Issue 4: H2 Database Connection Failed
+### Maven Command Not Found
 
-**Error**: `Could not get a connection from the pool`
+Install Maven: https://maven.apache.org/download.cgi
 
-**Solution**:
-1. Ensure `data/` directory exists in project root
-2. Check `application.properties` database URL is correct
-3. Delete old database file: `data/examdb.mv.db`
-4. Restart the application
+Add to PATH:
+- **Windows:** System Environment Variables
+- **Linux/macOS:** `.bashrc` or `.zshrc`
 
-### Issue 5: File Upload Not Working
+Verify: `mvn -version`
 
-**Error**: `Directory not found` or `Permission denied`
+### Java Version Error
 
-**Solution**:
-1. Create `uploads/` directory in project root
-2. Ensure proper permissions:
-   ```bash
-   # Linux/Mac
-   chmod 755 uploads/
-   
-   # Windows: Right-click → Properties → Security → Edit
-   ```
+```bash
+java -version    # Check version
+# Install Java 17+
+```
 
----
+### Database Connection Error
 
-# 📜 License
+1. Verify `data/` directory exists
+2. Check `application.properties` URL
+3. Delete `data/examdb.mv.db`
+4. Restart application
 
-This project is **open-source** under the **MIT License**.
+### Static Resources Not Loading
 
-Feel free to use, modify, and distribute this project for personal or commercial use.
-
----
-
-# 📖 Usage Guide
-
-## For Admin Users
-
-1. **Login**: Visit http://localhost:7890/login with default credentials (admin/adminpass)
-2. **Dashboard**: View statistics and KPIs
-3. **Manage Exams**: 
-   - Create new exams with title, duration, and description
-   - Edit or delete existing exams
-4. **Manage Questions**: 
-   - Add multiple-choice questions to exams
-   - Edit or delete questions
-5. **Manage Students**: 
-   - View all registered students
-   - Reset student passwords if needed
-   - Delete student accounts
-6. **View Results**: Check exam submissions and student performance
-
-## For Student Users
-
-1. **Register**: Create account at http://localhost:7890/register
-2. **Login**: Access your student dashboard
-3. **Take Exam**: 
-   - View available exams
-   - Start an exam with live timer
-   - Use question palette for navigation
-4. **View Results**: 
-   - See immediate results after submission
-   - Review correct vs incorrect answers
-   - Access all previous exam results
-5. **Profile**: Update personal information and change password
+```bash
+mvn clean install
+# Clear browser cache
+# Restart application
+```
 
 ---
 
-# 💖 Support & Contact
+## License
 
-This project is created by **LazyCoder**.
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
-### 📺 Subscribe to YouTube Channel
-https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
+**You are free to:**
+- Use commercially or privately
+- Modify and distribute
+- Use as template for other projects
 
-### 📱 WhatsApp Support
-https://wa.me/919572181024
+---
+
+## Support
+
+For issues, questions, or contributions:
+
+- **GitHub Issues:** [Report Issues](https://github.com/kumarianchal7279-cell/Online-examination-system/issues)
+- **GitHub Discussions:** [Ask Questions](https://github.com/kumarianchal7279-cell/Online-examination-system/discussions)
+- **Email:** Reach out through GitHub profile
 
 ---
 
 <p align="center">
-<strong>Happy Coding ❤️</strong>
+<strong>Built with ❤️ | Open Source & Free</strong>
 </p>
